@@ -35,7 +35,7 @@ su steam
 loadConfig
 echo "Starting CS:GO Dedicated Server"
 cd /opt/steam/counterstrike
-export LD_LIBRARY_PATH=/opt/steam/counterstrike:/opt/steam/counterstrike/bin:${LD_LIBRARY_PATH}
+export LD_LIBRARY_PATH=/opt/steam/counterstrike:/opt/steam/counterstrike/bin
 ./srcds_linux -game csgo -console -usercon +game_type 0 +game_mode 1 +mapgroup mg_active +map de_dust2 +sv_setsteamaccount $GSLT & wait ${!}
 echo "Insurgency CS:GO Server died"
 shutdown
