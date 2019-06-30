@@ -20,7 +20,7 @@ Start a new container with the following command.
 `docker run -d --init --name csgo-dedicated --restart unless-stopped -e GSLT=xxx -v csgo-config:/var/csgo/cfg -p 27015:27015 -p 27015:27015/udp nilsramsperger/counterstrike-go-dedicated`
 
 * Replace the `xxx` for your GSLT
-* The server will be available on port 2015.
+* The server will be available on port 27015.
 You can change it as you like.
 
 ## Troubleshooting
