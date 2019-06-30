@@ -34,6 +34,7 @@ trap term_handler SIGTERM
 loadConfig
 echo "Starting CS:GO Dedicated Server"
 cd /opt/steam/counterstrike
-su steam -c "./srcds_run -game csgo -console -usercon +game_type 0 +game_mode 1 +mapgroup mg_active +map de_dust2 +sv_setsteamaccount $GSLT & wait ${!}"
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/opt/steam/counterstrike:/opt/steam/counterstrike/bin"
+su steam -c "./srcds_linux -game csgo -console -usercon +game_type 0 +game_mode 1 +mapgroup mg_active +map de_dust2 +sv_setsteamaccount $GSLT & wait ${!}"
 echo "Insurgency CS:GO Server died"
 shutdown
