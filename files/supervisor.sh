@@ -11,7 +11,7 @@ storeConfig() {
 }
 
 shutdown() {
-    kill ${!}
+    pkill srcds_linux
     storeConfig
     echo "Container stopped"
     exit 143;
