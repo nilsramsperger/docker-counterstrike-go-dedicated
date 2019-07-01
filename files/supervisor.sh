@@ -29,8 +29,14 @@ install() {
     echo "Installation done"
 }
 
+update() {
+    echo "Updating CS:GO Dedicated Server"
+    /opt/steam/steamcmd.sh +login anonymous +app_update 740 +quit
+    echo "Update done"
+}
+
 trap term_handler SIGTERM
-[ ! -d "/opt/steam/counterstrike" ] && install
+[ ! -d "/opt/steam/counterstrike" ] && install || update
 loadConfig
 echo "Starting CS:GO Dedicated Server"
 cd /opt/steam/counterstrike
