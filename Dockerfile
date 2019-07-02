@@ -11,7 +11,5 @@ RUN apt-get update \
     && apt-get remove -y unzip \
     && useradd -ms /bin/bash steam
 ADD ./files/ /tmp
-EXPOSE 27015/udp
-EXPOSE 27015
 VOLUME ["/var/csgo/cfg"]
 CMD ["/supervisor.sh"]
