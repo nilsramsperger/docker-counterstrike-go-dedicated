@@ -1,8 +1,6 @@
 # Counterstrike Global Offensive dedicated server
 This image provides a plain CS:GO dedicated server.
 
-# Attention! This is work in progress and not ready for use!
-
 ## System Requirements
 The server is not contained by the image, to keep it small.
 It will download and install on first start of the container.
