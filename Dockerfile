@@ -9,7 +9,8 @@ RUN apt-get update \
     && rm /tmp/steamcmd_linux.tar.gz \
     && chmod +x /supervisor.sh \
     && apt-get remove -y unzip \
-    && useradd -ms /bin/bash steam
+    && useradd -ms /bin/bash steam \
+    && mkdir -p /home/steam/.steam
 ADD ./files/ /tmp
 VOLUME ["/var/csgo/cfg"]
 CMD ["/supervisor.sh"]

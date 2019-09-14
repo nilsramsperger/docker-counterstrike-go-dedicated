@@ -26,6 +26,7 @@ install() {
     echo "Installing CS:GO Dedicated Server"
     /opt/steam/steamcmd.sh +login anonymous +force_install_dir /opt/steam/counterstrike +app_update 740 validate +quit
     chown -R steam:steam /opt/steam/counterstrike
+    ln -s /opt/steam/linux32 /home/steam/.steam/sdk32
     echo "Installation done"
 }
 
