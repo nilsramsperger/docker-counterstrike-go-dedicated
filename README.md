@@ -19,7 +19,7 @@ Start a new container with the following command.
 
 * Replace the `xxx` for your GSLT
 * The server will be available on port 27015.
-If you want it to use enother port, change `-e PORT=27015` and `-p 27015:27015 -p 27015:27015/udp` accordingly.
+If you want it to use another port, change `-e PORT=27015` and `-p 27015:27015 -p 27015:27015/udp` accordingly.
 Internal and external ports must match.
 
 ## Troubleshooting
