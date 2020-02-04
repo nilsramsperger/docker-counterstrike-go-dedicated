@@ -27,3 +27,8 @@ Internal and external ports must match.
 The installation fails with the message: `Error! App '740' state is 0x202 after update job.`
 ### Answer
 Your server lacks the needed HDD space for installation.
+
+## Known Issues
+* The server stops updating after a while.
+Thus it stops working.
+The container has to be recreated.
