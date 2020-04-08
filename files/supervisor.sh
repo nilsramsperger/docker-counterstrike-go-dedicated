@@ -32,7 +32,7 @@ install() {
 
 update() {
     echo "Updating CS:GO Dedicated Server"
-    /opt/steam/steamcmd.sh +login anonymous +app_update 740 +quit
+    /opt/steam/steamcmd.sh +login anonymous +app_update 740 validate +quit
     echo "Update done"
 }
 
