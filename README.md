@@ -4,7 +4,7 @@ This image provides a plain CS:GO dedicated server.
 ## System Requirements
 The server is not contained by the image, to keep it small.
 It will download and install on first start of the container.
-You will need at least **20GB** of HDD space, for the container to inflate.
+You will need at least **50GB** of HDD space, for the container to inflate.
 
 ## Create a GSLT (Game Server Login Token)
 To start a CS:GO dedicated server, you need to get a GSLT from Valve first.
