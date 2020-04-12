@@ -10,7 +10,8 @@ RUN apt-get update \
     && chmod +x /supervisor.sh \
     && apt-get remove -y unzip \
     && useradd -ms /bin/bash steam \
-    && mkdir -p /home/steam/.steam
+    && mkdir -p /home/steam/.steam \
+    && locale-gen en_US.UTF-8
 ADD ./files/ /tmp
 VOLUME ["/var/csgo/cfg"]
 CMD ["/supervisor.sh"]
