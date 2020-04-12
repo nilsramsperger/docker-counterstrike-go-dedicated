@@ -2,12 +2,15 @@
 
 loadConfig() {
     echo "Loading config"
+    chown -R steam:steam /var/csgo/cfg
     yes | cp -rfa /var/csgo/cfg/. /opt/steam/counterstrike/csgo/cfg/
 }
 
 storeConfig() {
     echo "Storing config"
+    rm -r /var/csgo/cfg/*
     yes | cp -rfa /opt/steam/counterstrike/csgo/cfg/. /var/csgo/cfg/
+    chown -R root:root /var/csgo/cfg
 }
 
 shutdown() {
