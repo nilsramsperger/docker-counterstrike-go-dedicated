@@ -10,7 +10,6 @@ loadConfig() {
 
 storeConfig() {
     echo "Storing config"
-    rm -rf /var/csgo/cfg/*
     yes | cp -rfa /opt/steam/counterstrike/csgo/cfg/. /var/csgo/cfg/
     chown -R root:root /var/csgo/cfg
 }
