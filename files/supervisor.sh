@@ -35,7 +35,7 @@ install() {
 
 update() {
     echo "Updating CS:GO Dedicated Server"
-    /opt/steam/steamcmd.sh +login anonymous +app_update 740 validate +quit
+    /opt/steam/steamcmd.sh +login anonymous +force_install_dir /opt/steam/counterstrike +app_update 740 validate +quit
     echo "Update done"
 }
 
