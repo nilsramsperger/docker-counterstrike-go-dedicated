@@ -3,12 +3,14 @@
 loadConfig() {
     echo "Loading config"
     chown -R steam:steam /var/csgo/cfg
+    [! -d "/opt/steam/counterstrike/csgo/cfg/"] && mkdir -p /opt/steam/counterstrike/csgo/cfg/
+    chown -R steam:steam /opt/steam/counterstrike/csgo/cfg/
     yes | cp -rfa /var/csgo/cfg/. /opt/steam/counterstrike/csgo/cfg/
 }
 
 storeConfig() {
     echo "Storing config"
-    rm -r /var/csgo/cfg/*
+    rm -rf /var/csgo/cfg/*
     yes | cp -rfa /opt/steam/counterstrike/csgo/cfg/. /var/csgo/cfg/
     chown -R root:root /var/csgo/cfg
 }
