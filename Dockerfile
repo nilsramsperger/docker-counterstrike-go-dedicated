@@ -11,6 +11,7 @@ RUN apt-get update \
     && apt-get remove -y unzip \
     && useradd -ms /bin/bash steam \
     && mkdir -p /home/steam/.steam \
+    && chown -R steam:steam /home/steam \
     && locale-gen en_US.UTF-8
 ADD ./files/ /tmp
 VOLUME ["/var/csgo/cfg"]
