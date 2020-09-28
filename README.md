@@ -1,6 +1,10 @@
 # Counterstrike Global Offensive dedicated server
 This image provides a plain CS:GO dedicated server.
 
+## DEPRECATED!
+This image is deprecated and will is not under development anymore.
+Feel free to fork and build your own.
+
 ## System Requirements
 The server is not contained by the image, to keep it small.
 It will download and install on first start of the container.
